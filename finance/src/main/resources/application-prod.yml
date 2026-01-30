@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/finances?useSSL=false&serverTimezone=UTC
+    username: root          # Seu usuário do MySQL
+    password:      # Sua senha do MySQL
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: update  # Cria as tabelas se não existirem, mas mantém os dados
+    show-sql: false     # Em produção geralmente não queremos ver logs de SQL

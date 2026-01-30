@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:financedb  # Cria o banco na memória RAM
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true  # Habilita o painel visual no navegador
+      path: /h2-console
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update # Cria/Atualiza as tabelas automaticamente
+    show-sql: true # Mostra o SQL no console do IntelliJ (bom para aprender)
